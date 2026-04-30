@@ -2,8 +2,8 @@ import styles from "./Header.module.scss";
 
 export default function Header() {
   return (
-    <header className={`${styles.header}`}>
-      <h1>MarkDown</h1>
+    <header className={styles.header}>
+      <h1>Markdown</h1>
     </header>
   );
 }

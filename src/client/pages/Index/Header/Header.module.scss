@@ -1,10 +1,11 @@
 .header {
-  /* background-color: hsl(0 0% 45%); */
+  background-color: hsl(0 0% 15%);
   grid-area: header;
   @include flex-center;
-  @include fluid-text(32, 18);
+  @include fluid-text(56, 36);
   font-family: 'Inter';
+  font-weight: 700;
   letter-spacing: toRem(1.5);
-  color: hsl(0 0% 22.5%);
+  color: hsl(160 80% 65%);
   user-select: none;
 }

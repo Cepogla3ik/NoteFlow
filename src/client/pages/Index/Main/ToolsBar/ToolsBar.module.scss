@@ -4,10 +4,10 @@
   transform: translateX(-50%);
   margin-top: $tools-bar-margin-top;
   margin-bottom: $tools-bar-margin-bottom;
-  background-color: hsl(0 0% 30%);
+  background-color: hsl(0 0% 5%);
   width: 90%;
   height: $tools-bar-height;
   border-radius: toRem(40);
-  opacity: 0.8;
+  opacity: 0.75;
   display: flex;
 }
