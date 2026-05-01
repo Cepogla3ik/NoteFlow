@@ -7,6 +7,7 @@ export default class Board {
     this.entries = new Set(entries);
   }
   
+  get size() { return this.entries.length }
   addEntry(entry: Array<string>): this {
     this.entries.add(entry);
     return this;

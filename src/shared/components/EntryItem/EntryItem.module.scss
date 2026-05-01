@@ -1,0 +1,16 @@
+.entry {
+  position: relative;
+  background-color: hsl(160 50% 45%);
+  border: hsl(160 50% 40%);
+  border-radius: toRem(15);
+  display: flex;
+  
+  .slot {
+    background: transparent;
+    border-right: toRem(2) solid hsl(160 50% 40%);
+    @include flex-center;
+    @include fluid-text(24, 16);
+    font-weight: 500;
+    font-family: 'Inter';
+  }
+}

@@ -9,11 +9,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-            @use "@client/app/functions" as *;
-            @use "@client/app/variables" as *;
-            @use "@client/app/mixins" as *;
-          `;
-        }
+          @use "@client/app/functions" as *;
+          @use "@client/app/variables" as *;
+          @use "@client/app/mixins" as *;
+        `
       }
     }
   },
