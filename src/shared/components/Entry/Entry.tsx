@@ -4,9 +4,9 @@ export default function Entry({ slotsAmount = 0, labelsArr = [] }: { slotsAmount
   return (
     <div className={styles.entry}>
       {[...Array(slotsAmount)].map((_, i) => (
-        <div key={i} className={styles.slot}>
+        <span key={i} className={styles.slot}>
           { labelsArr[i] }
-        </div>
+        </span>
       ))}
     </div>
   );

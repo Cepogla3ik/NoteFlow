@@ -5,10 +5,14 @@ import './main.scss'
 /* import Data from '@client/features/Data'; */
 
 createRoot(document.getElementById('root')!).render(
+  <Index />
+)
+
+/* createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Index />
-  </StrictMode>,
-)
+  </StrictMode>
+) */
 
 /* new Data("name", {});
 new Data("name", {}); */

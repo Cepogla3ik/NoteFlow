@@ -3,15 +3,22 @@
   background-color: hsl(160 50% 45%);
   border: hsl(160 50% 40%);
   border-radius: toRem(15);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(toRem(60), 1fr));
 
   .slot {
-    background: transparent;
-    border-right: toRem(2) solid hsl(160 50% 40%);
     @include flex-center;
+    justify-content: safe center;
     @include fluid-text(24, 16);
     font-weight: 500;
     font-family: 'Inter';
     color: hsl(160 50% 20%);
-    padding-inline: toRem(15);
+    padding-inline: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    &:not(:last-child) {
+      border-right: toRem(2) solid hsl(160 50% 40%);
+    }
   }
 }
