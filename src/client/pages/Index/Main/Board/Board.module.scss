@@ -1,14 +1,14 @@
 .board {
+  position: relative;
   background-color: hsl(170 40% 35%);
   width: 80%;
   height: max(toRem(300), 80%);
   border-radius: toRem(40);
-  position: relative;
   left: 50%;
-  top: calc((100% - $tools-bar-height - $tools-bar-margin-top - $tools-bar-margin-bottom) / 2);
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   padding: toRem(15);
   display: flex;
   flex-direction: column;
+  margin-block: toRem(20);
   gap: toRem(5);
 }

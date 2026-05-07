@@ -1,4 +1,4 @@
-import Generator from '@shared/util/Generator';
+/* import Generator from '@shared/util/Generator';
 
 export default class Data<T extends Record<string, any> = Record<string, any>> {
   private name: string;
@@ -39,3 +39,4 @@ export default class Data<T extends Record<string, any> = Record<string, any>> {
     return this;
   }
 }
+*/

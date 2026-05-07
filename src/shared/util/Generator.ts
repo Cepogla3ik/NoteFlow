@@ -1,4 +1,4 @@
-import randomInt from "./randomInt";
+/* import randomInt from "./randomInt";
 
 export interface GeneratorOptions {
   includesNumbers?: boolean;
@@ -72,3 +72,4 @@ export default class Generator {
     return arr.join('');
   }
 }
+*/
