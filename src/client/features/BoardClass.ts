@@ -17,8 +17,17 @@ export default class BoardClass {
 
     return this.entries.length;
   }
-  addEntry(entry: Array<string>): this {
-    this.entries.push(entry);
+  addEntry(entry: Array<string> | undefined): this {
+    if (entry) {
+      this.entries.push(entry);
+    } else if (this.entries.at(-1).length > 0) {
+      const emptyEntry = [];
+      for (let i = 1; i <= this.entries.at(-1).length; i++) { emptyEntry.push("") }
+      this.entries.push(emptyEntry);
+    } else {
+      this.entries.push([""]);
+    }
+    
     return this;
   }
   deleteEntry(entry: Array<string>): this {

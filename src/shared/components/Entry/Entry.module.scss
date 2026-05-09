@@ -1,24 +1,27 @@
+$entry-border: hsl(170 50% 50%);
+
 .entry {
   position: relative;
-  background-color: hsl(160 50% 45%);
-  border: hsl(160 50% 40%);
-  border-radius: toRem(15);
+  background-color: hsl(170 50% 60%);
+  border: 1.5px solid $entry-border;
+  border-radius: toRem(10);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(toRem(60), 1fr));
+  min-height: toRem(40);
 
   .slot {
     @include flex-center;
     justify-content: safe center;
-    @include fluid-text(24, 16);
+    @include fluid-text(30, 18);
     font-weight: 500;
     font-family: 'Inter';
     color: hsl(160 50% 20%);
-    padding-inline: 8px;
+    padding-inline: 5px;
     overflow-x: auto;
     white-space: nowrap;
     
     &:not(:last-child) {
-      border-right: toRem(2) solid hsl(160 50% 40%);
+      border-right: toRem(2) solid $entry-border;
     }
   }
 }

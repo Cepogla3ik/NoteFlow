@@ -1,7 +1,7 @@
 import ToolbarItem from "@shared/components/ToolbarItem/ToolbarItem";
 import styles from "./ToolsBar.module.scss";
 
-export default function ToolsBar() {
+export default function ToolsBar({ boardClass }) {
   const addSvgItem = 
     <svg width="auto" height="100%" viewBox="0 0 100 100">
       <polyline fill="none" stroke="hsl(140 90% 60%)" strokeWidth="7.5" strokeLinecap="round" strokeLinejoin="round" points="20,50 80,50 50,50 50,80 50,20" />
@@ -18,7 +18,7 @@ export default function ToolsBar() {
   
   return (
     <div className={styles["tools-bar"]}>
-      <ToolbarItem content={addSvgItem} onClick={testOnClick} />
+      <ToolbarItem content={addSvgItem} onClick={() => {boardClass.addEntry()}} />
       <ToolbarItem content={deleteSvgItem} onClick={testOnClick} />
     </div>
   );

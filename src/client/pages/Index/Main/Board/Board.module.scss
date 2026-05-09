@@ -1,14 +1,15 @@
 .board {
   position: relative;
-  background-color: hsl(170 40% 35%);
-  width: 80%;
+  background-color: hsl(180 65% 42.5%);
+  border: 3px solid hsl(180 70% 37.5%);
+  width: 90%;
   height: max(toRem(300), 80%);
-  border-radius: toRem(40);
+  border-radius: toRem(30);
   left: 50%;
   transform: translateX(-50%);
   padding: toRem(15);
   display: flex;
   flex-direction: column;
   margin-block: toRem(20);
-  gap: toRem(5);
+  gap: toRem(7.5);
 }

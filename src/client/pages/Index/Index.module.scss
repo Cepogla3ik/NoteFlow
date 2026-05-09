@@ -5,10 +5,19 @@
   width: 100%;
   height: 100dvh;
   display: grid;
+  overflow: auto;
   grid-template-columns: min(20%, toRem(288)) auto;
   grid-template-rows: toRem(100) auto;
 
   grid-template-areas: 
     "nav  header"
     "nav  main";
+}
+
+@media (max-width: 480px) {
+  .index {
+    grid-template-areas: 
+      "header  header"
+      "main  main";
+  }
 }

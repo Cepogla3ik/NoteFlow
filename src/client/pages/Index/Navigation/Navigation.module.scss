@@ -1,4 +1,12 @@
 .navigation {
   background-color: hsl(0 0% 30%);
+  display: block;
   grid-area: nav;
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    display: none;
+    grid-area: none;
+  }
 }

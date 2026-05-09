@@ -2,7 +2,7 @@
   background-color: hsl(0 0% 15%);
   grid-area: header;
   @include flex-center;
-  @include fluid-text(56, 36);
+  @include fluid-text(56, 30);
   font-family: 'Inter';
   font-weight: 700;
   letter-spacing: toRem(1.5);
