@@ -1,13 +1,15 @@
-$entry-border: hsl(170 50% 50%);
+$entry-border: hsl(15 50% 55%);
 
 .entry {
   position: relative;
-  background-color: hsl(170 50% 60%);
-  border: 1.5px solid $entry-border;
-  border-radius: toRem(10);
+  background: transparent;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(toRem(60), 1fr));
   min-height: toRem(40);
+  
+  &:not(:last-child) {
+    border-bottom: toRem(2) solid $entry-border;
+  }
 
   .slot {
     @include flex-center;
@@ -15,7 +17,7 @@ $entry-border: hsl(170 50% 50%);
     @include fluid-text(30, 18);
     font-weight: 500;
     font-family: 'Inter';
-    color: hsl(160 50% 20%);
+    color: hsl(15 50% 85%);
     padding-inline: 5px;
     overflow-x: auto;
     white-space: nowrap;

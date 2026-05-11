@@ -1,5 +1,6 @@
 .toolbar-item {
   background-color: hsl(0 10% 55% / 0.33);
+  border: 2px solid white;
   padding: 0;
   
   &:not(:last-child) {
