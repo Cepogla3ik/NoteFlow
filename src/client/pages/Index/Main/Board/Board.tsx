@@ -1,9 +1,7 @@
-import BoardClass from "@client/features/BoardClass";
-import BoardItem from "@shared/components/BoardItem/BoardItem";
-import { useMemo } from "react";
+import type { BoardProps } from "./Board.interface"; 
 import styles from './Board.module.scss';
 
-export default function Board({ content }) {
+export default function Board({ content }: BoardProps) {
   
   return (
     <div className={styles.board}>{ content }</div>

@@ -17,15 +17,18 @@ export default class BoardClass {
 
     return this.entries.length;
   }
-  addEntry(entry: Array<string> | undefined): this {
+  addEntry(entry?: Array<string>): this {
     if (entry) {
       this.entries.push(entry);
-    } else if (this.entries.at(-1).length > 0) {
-      const emptyEntry = [];
-      for (let i = 1; i <= this.entries.at(-1).length; i++) { emptyEntry.push("") }
-      this.entries.push(emptyEntry);
     } else {
-      this.entries.push([""]);
+      const lastEntry = this.entries.at(-1);
+      
+      if (lastEntry && lastEntry.length > 0) {
+        const emptyEntry = new Array(lastEntry.length).fill("");
+        this.entries.push(emptyEntry);
+      } else {
+        this.entries.push([""]);
+      }
     }
     
     return this;
