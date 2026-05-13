@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/my_website/',
+  base: '/NoteFlow/',
   css: {
     preprocessorOptions: {
       scss: {
