@@ -8,23 +8,29 @@ import styles from './Board.module.scss';
 export default function Board() {
   const boardEntries = useSelector((state: RootState) => state.app.board.entries);
   const selectedEntryIndex = useSelector((state: RootState) => state.app.board.selected);
-  const boardElementRef = useRef(null);
+
+  const boardElementRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   
   
   useEffect(() => {
-    if (!boardElementRef) return;
     const boardElement = boardElementRef.current;
-    
-    const onClick = (e) => {
-      const selectedEntryIndex = +e.target.closest('[data-index]').getAttribute('data-index');
+    if (!boardElement) return;
+  
+    const onClick = (e: MouseEvent) => {
+      const targetElement = e.target as HTMLElement;
+      const targetEntryElement = targetElement.closest('[data-index]');
+
+      const entriesArray = Array.from(targetEntryElement?.parentElement?.children || []);
+      const selectedEntryIndex = entriesArray.indexOf(targetEntryElement as HTMLDivElement);
       dispatch(setSelectedEntry(selectedEntryIndex));
     }
-    
-    boardElement.addEventListener('click', onClick)
+
+    boardElement.addEventListener('click', onClick);
     
     return () => { boardElement.removeEventListener('click', onClick) }
   }, []);
+
   
   return (
     <div ref={boardElementRef} className={styles.board}>

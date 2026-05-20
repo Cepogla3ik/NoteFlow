@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { type PayloadAction } from "@reduxjs/toolkit";
 
 interface BoardState {
   name: string;
@@ -36,8 +37,11 @@ const boardSlice = createSlice({
       state.entries = state.entries.filter((_, i) => i !== state.selected); // deleting fixing
       console.log("Filtered:", state.entries.filter((_, i) => i !== state.selected));
     },
-    setSelectedEntry: (state, action: PayloadAction<Number>) => {
-      state.selected = action.payload && state.selected;
+    setSelectedEntry: (state, action: PayloadAction<number>) => {
+      if (action.payload < 0 || action.payload >= state.entries.length || action.payload === state.selected) return;
+
+      state.selected = action.payload ?? state.selected;
+      console.log("Selected:", state.selected);
     }
   }
 });
